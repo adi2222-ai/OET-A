@@ -310,11 +310,10 @@ def generate_test_pdf(result, test, user_name, time_taken_minutes):
 
 
 # ---------------- Routes ----------------
-@app.route('/')
-def index():
-    if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
-    return redirect(url_for('login'))
+@app.route("/")
+def home():
+    return "Hello Render!"
+
 
 
 @app.route('/login', methods=['GET', 'POST'])
