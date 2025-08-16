@@ -1,7 +1,5 @@
-from flask import Flask
+from app import app
 
-app = Flask(__name__)
-
-@app.route("/")   # This is the root URL
+@app.route("/")
 def home():
-    return "Hello Render!"  
+    return "Hello Render!"
